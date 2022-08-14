@@ -1,5 +1,7 @@
 # goit-markup-hw-05
 
+Add animated decorative effects to layout pages
+
 «C1» For all hover and focus effects (color, background, shadow), transitions are made. Time is set to 250ms, and the timing function is cubic-bezier(0.4, 0, 0.2, 1).
 
 «C2» Transitions and animations explicitly specify the properties to be animated. There is no all value anywhere.
