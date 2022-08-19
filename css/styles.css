@@ -71,7 +71,6 @@ body {
   margin-right: auto;
   padding: 0 15px;
   /* background-color: aqua; */
-  
 }
 
 .image-description { 
@@ -239,6 +238,7 @@ nav .nav-link:hover::after {
   margin-top: -30px;
   margin-left: -30px;
   /* background-color: red; */
+  position: relative;
 }
 
 .work-examples {
@@ -257,18 +257,41 @@ nav .nav-link:hover::after {
 .projects-item {
   margin-top: 30px;
   margin-left: 30px;
+  position: relative;
+  overflow: hidden;
 }
 
 .project-info-container {
   padding: 20px 24px;
   border: 1px solid #eeeeee;
-  border-top: none;
-  position: relative;
+  border-top: none; 
 }
 
-.project-description {
-  overflow: hidden;
+.project-description-container {
   position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(100%);
+  transition: transform 250ms ease;
+  width: 100%;
+  height: 100%;
+}
+
+.project-description {  
+  color: #ffffff;
+  background-color: rgba(33, 150, 243, 0.9);
+  padding: 10px;
+  margin: 0;
+  width: 370px;
+  height: 294px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;  
+}
+
+.project-link:hover .project-description-container {
+  transform: translateY(0);
+
 }
 
 
@@ -560,4 +583,9 @@ p {
 
 .footer-social-icons {
   margin-left: 70px;
+}
+
+  /* modal window */
+.data-modal-open {
+  color: rgba(255, 255, 255, 1);
 }
