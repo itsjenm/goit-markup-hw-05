@@ -54,6 +54,9 @@ header {
 .header-container {
   display: flex;
   justify-content: space-between;
+
+
+  
 }
 
 body {
@@ -68,7 +71,26 @@ body {
   margin-right: auto;
   padding: 0 15px;
   /* background-color: aqua; */
+  
 }
+
+.image-description { 
+  text-align: center;
+  color:#ffffff;
+  position: relative;
+  overflow: hidden;
+  height: 70px;
+  padding-top: 27px;
+}
+
+.image-one:hover .image-description,
+.image-two:hover .image-description,
+.image-three:hover .image-description {
+  transform: translateY(-100%);
+  background-color: rgba(47, 48, 58, 0.8);
+}
+
+
 
 nav {
   /* background-color: lightcoral; */
@@ -90,6 +112,7 @@ nav {
   color: black;
   text-decoration: none;
   font-weight: 500;
+  
 }
 
 .current {
@@ -118,14 +141,28 @@ nav {
   fill: currentColor;
 }
 
-.icon-container :hover,
+/* .icon-container :hover,
 .icon-container :focus {
   fill: rgba(33, 150, 243, 1);
- }
+  transition: 250ms cubic-bezier(0.4,0,0.2,1);
+ } */
 
 .header-container :hover,
 .header-container :focus {
   color: #2196f3;
+
+}
+
+nav .nav-link:hover::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 48px;
+  border-bottom: 4px solid #2196F3;
+  border-radius: 2px;
+  padding-bottom: 28px;
+  transition: 250ms cubic-bezier(0.4,0,0.2,1);
+
 }
 
 .WebStudio {
@@ -180,6 +217,9 @@ nav {
   color: #ffffff;
   cursor: pointer;
   line-height: 30px;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .request-button:hover,
@@ -223,7 +263,14 @@ nav {
   padding: 20px 24px;
   border: 1px solid #eeeeee;
   border-top: none;
+  position: relative;
 }
+
+.project-description {
+  overflow: hidden;
+  position: absolute;
+}
+
 
 .project-link {
   display: block;
@@ -236,7 +283,10 @@ nav {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
   0px 4px 4px rgba(0, 0, 0, 0.06), 
   1px 4px 6px rgba(0, 0, 0, 0.16);
+  
 }
+
+
 
 .section {
   padding: 94px 0 94px 0;
