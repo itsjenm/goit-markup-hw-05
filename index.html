@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WebStudio Page</title>
 
-    <!-- stylesheet -->
-    <link rel="stylesheet" href="css/styles.css" />
 
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -23,8 +21,9 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
     />
 
-    <!-- modal js -->
-      <script src="modal.js"></script>
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="css/styles.css" />
+
 
   </head>
   <body>
@@ -64,12 +63,12 @@
     </header>
     <main>
       <section class="main-hero">
-        <div class="container hero-container" id="[data-modal-open]">
+        <div class="container hero-container">
           <h1 class="hero-title">
             EFFECTIVE SOLUTIONS FOR <br />
             YOUR BUSINESS
           </h1>
-            <button type="button" class="request-button">Request our service</button>
+            <button type="button" class="request-button" data-modal-open>Request our service</button>
         </div>
       </section>
       <section class="section">
@@ -131,11 +130,11 @@
         <div class="container">
           <h2 class="section-title">What we do</h2>
           <ul class="what-we-do list">
-            <li class="container image-one">
+            <li class="what-we-do-item">
               <img src="images/coding.jpg" alt="coding on tablet" width="370" />
               <p class="image-description">DESKTOP APPS</p>
             </li>
-            <li class="container image-two">
+            <li class="what-we-do-item">
               <img
                 src="images/testing.png"
                 alt="testing wireframes on mobile"
@@ -143,7 +142,7 @@
               />
               <p class="image-description">MOBILE APPS</p>
             </li>
-            <li class="container image-three">
+            <li class="what-we-do-item">
               <img
                 src="images/designing.png"
                 alt="designing on tablet"
@@ -541,14 +540,18 @@
     </footer>
 
      <!-- All you markup, including the modal window -->
-     <div class="data-modal-open is-hidden">
-      <div class="data-modal">
-        <div class="data-modal-close">+</div>
+     <div class="bg-modal is-hidden" data-modal>
+      <div class="modal-content" data-modal-open>
+        <div class="close" data-modal-close>
+          <svg class="icon icon-Vector-1-1" width="11px" height="11px">
+            <use href="images/icons.svg#icon-Vector-1-1"></use>
+          </svg>
+        </div>
       </div>
     </div>  
 
   <!-- Place before the body closing tag -->
-  <script src="/modal.js"></script>
+  <script src="./js/modal.js"></script>
 
   </body>
 </html>
